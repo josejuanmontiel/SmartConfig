@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DeviceFragment" >
+
+    <TextView
+        android:id="@+id/title_devices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/title_devices"
+        android:textSize="20sp" />
+    
+    <ImageView 
+        android:id="@+id/devices_refresh_button"
+        android:contentDescription="@string/refresh"
+        android:src="@drawable/refresh_icon"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_margin="5dp" />
+    
+    <ProgressBar
+        android:id="@+id/devices_refresh_spinner"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/devices_refresh_button"
+        android:layout_alignRight="@id/devices_refresh_button"
+        android:layout_alignTop="@id/devices_refresh_button"
+        android:layout_alignBottom="@id/devices_refresh_button"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/devices_recent_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/title_devices"
+        android:layout_marginLeft="20dp"
+        android:text="@string/devices_recent_text" />
+
+    <ListView
+        android:id="@+id/devices_recent_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/devices_recent_text"
+        android:layout_below="@id/devices_recent_text" >
+    </ListView>
+
+    <TextView
+        android:id="@+id/devices_list_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/devices_recent_listview"
+        android:layout_below="@id/devices_recent_listview"
+        android:text="@string/devices_list_text" />
+
+    <ListView
+        android:id="@+id/devices_list_listview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/devices_list_text"
+        android:layout_below="@id/devices_list_text" >
+    </ListView>
+
+</RelativeLayout>
