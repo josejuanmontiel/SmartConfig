@@ -32,7 +32,7 @@ public class DeviceListAdapter extends BaseAdapter {
 	Context context;
 	
 	@AfterInject
-	void initAdapterDevice() {
+	void initAdapter() {
 		devices = new ArrayList<Device>(); // initialize new list of devices
 		try {
 			JSONArray devicesArray = new JSONArray(prefs.devicesArray().get()); // get the JSON array of devices from the shared preferences
@@ -47,7 +47,7 @@ public class DeviceListAdapter extends BaseAdapter {
 	@Override
 	public void notifyDataSetChanged() {
 		super.notifyDataSetChanged();
-		initAdapterDevice();
+		initAdapter();
 	}
 	
 	@Override

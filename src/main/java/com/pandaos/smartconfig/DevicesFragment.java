@@ -30,11 +30,7 @@ import com.pandaos.smartconfig.utils.RecentDeviceListAdapter;
 import com.pandaos.smartconfig.utils.SharedPreferencesInterface_;
 import com.pandaos.smartconfig.utils.SmartConfigConstants;
 
-import org.androidannotations.annotations.EActivity;
-
-import java.util.List;
-
-@EFragment(R.layout.activity_main)
+@EFragment(R.layout.tab_devices_view)
 public class DevicesFragment extends Fragment {
 		
 	@Pref
